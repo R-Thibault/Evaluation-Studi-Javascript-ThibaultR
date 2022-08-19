@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2? family=Lato:wght@400;700;900&display=swap');
+
+:root {
+  --ff-primary- : 'Lato', sans-serif;
+
+  --fw-normal- : 400;
+  --fw-semibold- : 700;
+  --fw-bold- : 900;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  
+  font-family: var(--ff-primary-);
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background-image: linear-gradient(to bottom, rgba(174,140,91,1), rgba(140,86,56,1));
+}
+
+h1, h2, p, button{
+  
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h2{
+  font-weight:lighter;
+  font-size: 4em;
+}
+
+.container {
+  background-color: white;
+  width: 90vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(
+    to right,
+    white 0%,
+    rgba(169, 169, 169, 0.3) 50%,
+    rgba(169, 169, 169, 0.2) 50%,
+    white 100%
+  );
+
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  margin: 1em;
+  height: 8em;
+  width: 90vw;
+}
+
+main {
+  height: 70vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.button {
+  display:flex;
+  align-items: center;
+  gap: 0.5em;
+  background-color: transparent;
+  border: none;
+  font-size: 1.5em;
+  opacity: 0.6;
+}
+
+.button > img {
+  padding-bottom: 5px;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.player-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1em;
+  width: 30em;
+  height: 70vh;
+}
+
+.player-display {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.display-round {
+  color: #e8a9b3;
+}
+
+.red-dot{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  width: 25em;
+}
+
+.dot{
+  width: 16px;
+  height: 16px;
+}
+
+.center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1em;
+  width: 30em;
+  height: 70vh;
+}
+
+.dice{
+  background-color: white;
+  margin-top: 1em;
+  border-radius: 2px;
+  box-shadow: 1px 1px 8px 0 grey;
+}
+
+.action-button{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:4em;
+}
+
+.current-score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  width: 10em;
+  height: 8em;
+  background-color: #eb4d4c;
+}
+
+.display-current-score{
+  color:white;
+}
