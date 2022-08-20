@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
 
 :root {
   --ff-primary- : 'Lato', sans-serif;
 
+  --fw-light- : 300;
   --fw-normal- : 400;
   --fw-semibold- : 700;
   --fw-bold- : 900;
@@ -15,32 +16,29 @@
 }
 
 body {
-  
   font-family: var(--ff-primary-);
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
   min-height: 100vh;
   background-image: linear-gradient(to bottom, rgba(174,140,91,1), rgba(140,86,56,1));
 }
 
 h1, h2, p, button{
-  
   text-transform: uppercase;
   text-align: center;
 }
 
 h2{
-  font-weight:lighter;
-  font-size: 4em;
+  font-weight: var(--fw-light-);
+  font-size: 3em;
 }
 
 .container {
   background-color: white;
-  width: 90vw;
+  min-width: 90vw;
   height: 90vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background-image: linear-gradient(
     to right,
     white 0%,
@@ -53,20 +51,18 @@ h2{
 
 header {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  gap: 1em;
-  margin: 1em;
+  align-items: center;
   height: 8em;
-  width: 90vw;
+  max-width: 90vw;
 }
 
 main {
-  height: 70vh;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  flex-direction: column;
+  align-content:space-between;
+  justify-content: space-between;
+  height: 70vh;
 }
 
 .button {
@@ -89,21 +85,20 @@ main {
 
 .player-box {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  gap: 1em;
-  width: 30em;
-  height: 70vh;
+  justify-content: space-evenly;
 }
 
 .player-display {
   display: flex;
-  flex-direction: column;
-  gap: 2em;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1em;
 }
 
 .display-round {
+  font-size: 5em;
+  font-weight: var(--fw-light-);
   color: #e8a9b3;
 }
 
@@ -111,22 +106,25 @@ main {
   display:flex;
   justify-content: center;
   align-items: center;
-  gap: 1em;
-  width: 25em;
+  flex-wrap: wrap;
+  gap: 2em;
 }
 
 .center{
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: space-around;
   gap: 1em;
-  width: 30em;
-  height: 70vh;
+  
 }
 
 .dice{
+  display: grid;
+  place-items: center;
+  width: 8em;
+  height: 8em;
   background-color: white;
+  opacity: 0.9;
   margin-top: 1em;
   border-radius: 2px;
   box-shadow: 1px 1px 8px 0 grey;
@@ -136,7 +134,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap:4em;
+  gap:2em;
 }
 
 .current-score {
@@ -152,6 +150,8 @@ main {
 
 .display-current-score{
   color:white;
+  font-weight: var(--fw-light-);
+  font-size: 3em;
 }
 
 .active{
@@ -176,4 +176,38 @@ main {
     transform: rotate(10deg);
   }
   
+}
+
+@media  screen and (min-width: 55em) {
+  .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr 1fr;
+  }
+  .player-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 60vh;
+  }
+  .player-display {
+    display: flex;
+    flex-direction: column;
+  }
+  .center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4em;
+    height: 53vh;
+  }
+  .display-round {
+    font-size: 10em;
+  }
 }

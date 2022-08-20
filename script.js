@@ -70,6 +70,8 @@ function newGame(){
   player2GlobalScoreboard.textContent = 0;
   player1RoundScoreboard.textContent = 0;
   player2RoundScoreboard.textContent = 0;
+  rollButton.disabled = false;
+  holdButton.disabled = false;
   currentPlayer = 1;
   console.clear()
 }
@@ -118,6 +120,8 @@ holdButton.addEventListener("click",function(){
     player1GlobalScoreboard.textContent = player1GlobalScore;
     if(player1GlobalScore > 100){
       winner.textContent = "Player 1 Win !"
+      rollButton.disabled = true;
+      holdButton.disabled = true;
     };
   }else{
     player2GlobalScore = player2GlobalScore +player2RoundScore;
@@ -128,6 +132,8 @@ holdButton.addEventListener("click",function(){
     currentPlayer = 2;
     if(player2GlobalScore > 100){
       winner.textContent = "Player 2 Win !";
+      rollButton.disabled = true;
+      holdButton.disabled = true;
     };
   };
   if(currentPlayer == 1){
