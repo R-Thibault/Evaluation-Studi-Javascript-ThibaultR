@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="Layer_1"
+   data-name="Layer 1"
+   width="100"
+   height="100"
+   viewBox="0 0 100 100"
+   version="1.1"
+   sodipodi:docname="dice-04 - Copie.svg"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs549" />
+  <sodipodi:namedview
+     id="namedview547"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="8.77"
+     inkscape:cx="49.942987"
+     inkscape:cy="50.057013"
+     inkscape:window-width="1920"
+     inkscape:window-height="1057"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Layer_1" />
+  <title
+     id="title532">dice</title>
+  <g
+     id="g544">
+    <path
+       d="M26.34067,33.80355a9.13453,9.13453,0,0,1-8.95611-9.29387,9.13778,9.13778,0,0,1,8.95611-9.30727,9.139,9.139,0,0,1,8.96255,9.30727A9.1357,9.1357,0,0,1,26.34067,33.80355Z"
+       style="fill: #e92e3d"
+       id="path536" />
+    <path
+       d="M74.71716,83.50482a9.30719,9.30719,0,1,1,8.95611-9.30057A9.13732,9.13732,0,0,1,74.71716,83.50482Z"
+       style="fill: #e92e3d"
+       id="path538" />
+    <path
+       d="M74.20115,33.96766a9.13452,9.13452,0,0,1-8.9561-9.29387,8.96248,8.96248,0,1,1,17.9122,0A9.13452,9.13452,0,0,1,74.20115,33.96766Z"
+       style="fill: #e92e3d"
+       id="path540" />
+    <path
+       d="M26.56,83.29382a9.30719,9.30719,0,0,1,0-18.60113,9.30694,9.30694,0,0,1,0,18.60113Z"
+       style="fill: #e92e3d"
+       id="path542" />
+  </g>
+</svg>

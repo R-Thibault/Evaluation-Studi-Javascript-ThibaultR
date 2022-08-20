@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2? family=Lato:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
 
 :root {
   --ff-primary- : 'Lato', sans-serif;
@@ -115,11 +115,6 @@ main {
   width: 25em;
 }
 
-.dot{
-  width: 16px;
-  height: 16px;
-}
-
 .center{
   display: flex;
   flex-direction: column;
@@ -157,4 +152,28 @@ main {
 
 .display-current-score{
   color:white;
+}
+
+.active{
+  opacity: 0.3;
+}
+
+.dot{
+  display : none;
+}
+
+.shake {
+  animation: shake 0.5s infinite;
+}
+@keyframes shake {
+  0%{
+      transform: rotate(10deg);
+  }
+  50%{
+    transform: rotate(-10deg);
+  }
+  100%{
+    transform: rotate(10deg);
+  }
+  
 }
