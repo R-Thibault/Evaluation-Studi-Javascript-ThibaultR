@@ -73,14 +73,12 @@ main {
   border: none;
   font-size: 1.5em;
   opacity: 0.6;
+  cursor: pointer;
+
 }
 
 .button > img {
   padding-bottom: 5px;
-}
-
-.button:hover {
-  cursor: pointer;
 }
 
 .player-box {
@@ -118,7 +116,7 @@ main {
   
 }
 
-.dice{
+.die{
   display: grid;
   place-items: center;
   width: 8em;

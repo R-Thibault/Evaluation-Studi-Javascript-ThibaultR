@@ -29,6 +29,7 @@ const dot2 = document.getElementById("dot-2")
 
 
 
+
 function showDisplayPlayer(){
   if(currentPlayer == 1){
    player2Display.classList.add("active");
