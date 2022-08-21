@@ -129,7 +129,7 @@ holdButton.addEventListener("click",function(){
     console.log(player1GlobalScore);
     player1GlobalScoreboard.textContent = player1GlobalScore;
     displayText.textContent = "You save your score, player 2 turn !";
-    if(player1GlobalScore > 100){
+    if(player1GlobalScore >= 100){
       displayText.textContent = "Player 1 Win !"
       rollButton.disabled = true;
       holdButton.disabled = true;
@@ -142,7 +142,7 @@ holdButton.addEventListener("click",function(){
     player2GlobalScoreboard.textContent = player2GlobalScore;
     currentPlayer = 2;
     displayText.textContent = "You save your score, player 1 turn!";
-    if(player2GlobalScore > 100){
+    if(player2GlobalScore >= 100){
       displayText.textContent = "Player 2 Win !";
       rollButton.disabled = true;
       holdButton.disabled = true;

@@ -32,12 +32,11 @@ h1, h2, p, button{
 
 h2{
   font-weight: var(--fw-light-);
-  font-size: 3em;
 }
 
 .container {
   background-color: white;
-  min-width: 90vw;
+  min-width: 95vw;
   height: 90vh;
   background-image: linear-gradient(
     to right,
@@ -53,7 +52,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 8em;
+  height: 3em;
   max-width: 90vw;
 }
 
@@ -71,10 +70,8 @@ main {
   gap: 0.5em;
   background-color: transparent;
   border: none;
-  font-size: 1.5em;
   opacity: 0.6;
   cursor: pointer;
-
 }
 
 .button > img {
@@ -119,19 +116,16 @@ main {
 .die{
   display: grid;
   place-items: center;
-  width: 8em;
-  height: 8em;
   background-color: white;
   opacity: 0.9;
-  margin-top: 1em;
   border-radius: 2px;
   box-shadow: 1px 1px 8px 0 grey;
 }
 
 #displayText {
-  font-size: 1.3em;
   font-weight: var(--fw-normal-);
   color: #e8a9b3;
+  padding-right: 0.5em;
 }
 
 .action-button{
@@ -146,16 +140,14 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2em;
-  width: 10em;
-  height: 8em;
+  gap: 1em;
+  width: 6em;
   background-color: #eb4d4c;
 }
 
 .display-current-score{
   color:white;
   font-weight: var(--fw-light-);
-  font-size: 3em;
 }
 
 .active{
@@ -188,6 +180,12 @@ main {
     flex-direction: column;
     align-items: center;
   }
+  h2{
+    font-size: 3em;
+  }
+  header {
+    height: 8em;
+  }
   main {
     display: grid;
     grid-template-columns: 1fr 2.5fr 1fr;
@@ -213,5 +211,24 @@ main {
   }
   .display-round {
     font-size: 10em;
+  }
+  .button {
+    font-size: 1.5em;
+  }
+  .current-score {
+    gap: 2em;
+    width: 10em;
+    height: 8em;
+  }
+  .display-current-score{
+    font-size: 3em;
+  }
+  .die{
+    width: 8em;
+    height: 8em;
+    margin-top: 1em;
+  }
+  #displayText {
+    font-size: 1.3em;
   }
 }
