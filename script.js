@@ -32,15 +32,16 @@ const dot2 = document.getElementById("dot-2")
 
 function showDisplayPlayer(){
   if(currentPlayer == 1){
-   player2Display.classList.add("active");
-   dot2.classList.add("dot");
-   player1Display.classList.remove("active");
-   dot1.classList.remove("dot");
+    player2Display.classList.add("active");
+    dot2.classList.add("dot");
+    player1Display.classList.remove("active");
+    dot1.classList.remove("dot");
   }else{
-   player1Display.classList.add("active");
-   dot1.classList.add("dot");
-   player2Display.classList.remove("active");
-   dot2.classList.remove("dot");
+    player2Display.classList.remove("active");
+    dot2.classList.remove("dot");
+    player1Display.classList.add("active");
+    dot1.classList.add("dot");
+
 }
 }
 
