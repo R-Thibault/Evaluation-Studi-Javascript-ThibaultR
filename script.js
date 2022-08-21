@@ -25,7 +25,7 @@ const holdButton = document.getElementById("holdbutton")
 const newGameButton = document.getElementById("newgamebutton") 
 const dot1 = document.getElementById("dot-1")
 const dot2 = document.getElementById("dot-2")
-
+const displayText = document.getElementById("displayText")
 
 
 
@@ -52,11 +52,13 @@ function endTurn () {
     player1GlobalScore += player1RoundScore;
     player1GlobalScoreboard.textContent = player1GlobalScore;
     player1RoundScore = 0;
+    displayText.textContent = " ";
     currentPlayer = 2;
   }else {
     player2GlobalScore += player2RoundScore;
     player2GlobalScoreboard.textContent = player2GlobalScore;
     player2RoundScore = 0;
+    displayText.textContent = " ";
     currentPlayer = 1;
 }
 }
@@ -72,6 +74,7 @@ function newGame(){
   player2GlobalScoreboard.textContent = 0;
   player1RoundScoreboard.textContent = 0;
   player2RoundScoreboard.textContent = 0;
+  displayText.textContent = " ";
   rollButton.disabled = false;
   holdButton.disabled = false;
   currentPlayer = 1;
@@ -82,6 +85,7 @@ function newGame(){
 rollButton.addEventListener("click", function(){
   let randomNumber = Math.floor(Math.random()*6) + 1
   const dieShake = dieBox.classList.add("shake");
+
   setTimeout(function(){
         dieBox.classList.remove("shake");      
   },
@@ -89,12 +93,15 @@ rollButton.addEventListener("click", function(){
   document.querySelector("#die").setAttribute("src", images[randomNumber]);
   console.log(randomNumber);
   
+  displayText.textContent = " ";
+
   if(currentPlayer == 1){
     if(randomNumber == 1){
       player1RoundScore = 0;
       player1RoundScoreboard.textContent = player1RoundScore;
       endTurn();
       showDisplayPlayer();
+      displayText.textContent = "You roll a 1, player 2 turn!";
     }else{
     player1RoundScore += randomNumber;
     player1RoundScoreboard.textContent = player1RoundScore;
@@ -105,6 +112,7 @@ rollButton.addEventListener("click", function(){
       player2RoundScoreboard.textContent = player2RoundScore;
       endTurn();
       showDisplayPlayer();
+      displayText.textContent = "You roll a 1, player 1 turn!";
     }else{
     player2RoundScore += randomNumber;
     player2RoundScoreboard.textContent = player2RoundScore;
@@ -120,8 +128,9 @@ holdButton.addEventListener("click",function(){
     player1RoundScoreboard.textContent = player1RoundScore;
     console.log(player1GlobalScore);
     player1GlobalScoreboard.textContent = player1GlobalScore;
+    displayText.textContent = "You save your score, player 2 turn !";
     if(player1GlobalScore > 100){
-      winner.textContent = "Player 1 Win !"
+      displayText.textContent = "Player 1 Win !"
       rollButton.disabled = true;
       holdButton.disabled = true;
     };
@@ -132,8 +141,9 @@ holdButton.addEventListener("click",function(){
     console.log(player2GlobalScore);
     player2GlobalScoreboard.textContent = player2GlobalScore;
     currentPlayer = 2;
+    displayText.textContent = "You save your score, player 1 turn!";
     if(player2GlobalScore > 100){
-      winner.textContent = "Player 2 Win !";
+      displayText.textContent = "Player 2 Win !";
       rollButton.disabled = true;
       holdButton.disabled = true;
     };
